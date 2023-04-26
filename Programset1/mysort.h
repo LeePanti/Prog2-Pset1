@@ -10,13 +10,14 @@ public:
 
     int bucket[10][SIZE+1];
     int array[SIZE];
+     void sort(int[]);
 
 private:
     int determineMaximumDigits (int [], int);
     void distributeValues (int[], int);
     void collectValues(int []);
     void resetBucket();
-    void sort(int[], int[]);
+
 
 
 
