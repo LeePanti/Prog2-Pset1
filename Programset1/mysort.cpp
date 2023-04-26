@@ -22,7 +22,7 @@ int MySort::determineMaximumDigits (int a[], int b){
 }
 void MySort::distributeValues (int array[], int currentDigit){
 
-    int divisor = 1;
+    int divisor = 10;
         for (int i = 1; i < currentDigit; i++) {
           divisor *= 10;
         }
