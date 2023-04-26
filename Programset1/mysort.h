@@ -10,6 +10,16 @@ public:
 
     int bucket[10][SIZE+1];
     int array[SIZE];
+
+private:
+    int determineMaximumDigits (int [], int);
+    void distributeValues (int[], int);
+    void collectValues(int []);
+    void resetBucket();
+    void sort(int[], int[]);
+
+
+
 };
 
 #endif // MYSORT_H
