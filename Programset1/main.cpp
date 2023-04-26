@@ -1,20 +1,28 @@
-#include <iostream>
-#include "MySort.h"
+#include<iostream>
+#include <iomanip>
+#include "mysort.h"
 
-using namespace std;
+int main()
+{
+    int array[MySort::SIZE] = {100, 100, 100, 519, 37, 9999, 3, 1, 238};
 
-int main() {
-    const int SIZE = MySort::SIZE;
-    int array[SIZE] = {32, 4, 77, 23, 11, 43, 89, 66, 33};
+    std::cout<<"Original array elements: \n";
 
-    MySort sorter;
-    sorter.sort(array);
+    for(int i = 0; i < MySort::SIZE; i++)
+        std::cout<<std::setw( 5 ) << array[ i ];
 
-    cout << "Sorted array: ";
-    for (int i = 0; i < SIZE; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
+    std::cout<<"\n\n";
+
+    MySort sortObj;
+    sortObj.sort(array);
+
+    std::cout<<"\nArray elements in sorted order: \n";
+
+    for(int i = 0; i < MySort::SIZE; i++)
+        std::cout<<std::setw( 5 ) << array[ i ];
+
+    std::cout<<"\n";
+    std::cin.get();
 
     return 0;
 }
