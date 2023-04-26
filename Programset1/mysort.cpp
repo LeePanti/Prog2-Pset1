@@ -23,13 +23,16 @@ int MySort::determineMaximumDigits (int a[], int b){
 void MySort::distributeValues (int array[], int currentDigit){
 
     int divisor = 10;
+    int columnNumber = 1;
+    int rowNumber;
+
         for (int i = 1; i < currentDigit; i++) {
           divisor *= 10;
         }
 
         for (int i = 0; i < SIZE; i++) {
-          int rowNumber = (array[i] / divisor) % 10;
-          int columnNumber = 1;
+            rowNumber = (array[i] / divisor) % 10;
+
 
           while (bucket[rowNumber][columnNumber] != 0) {
             columnNumber++;
