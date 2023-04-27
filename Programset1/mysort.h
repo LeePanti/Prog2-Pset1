@@ -6,21 +6,18 @@ class MySort
 {
 public:
     MySort();
-    static const int SIZE=9;
+    static const int SIZE = 9;
 
-    int bucket[10][SIZE+1];
+    int bucket[10][SIZE + 1];
     int array[SIZE];
-     void sort(int[]);
+    void sort(int[]);
 
 private:
     int determineMaximumDigits (int [], int);
     void distributeValues (int[], int);
     void collectValues(int []);
     void resetBucket();
-
-
-
-
+    void printBucket();
 };
 
 #endif // MYSORT_H
